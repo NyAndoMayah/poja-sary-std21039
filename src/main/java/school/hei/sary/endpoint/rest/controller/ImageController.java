@@ -15,7 +15,7 @@ public class ImageController {
 
   @PutMapping(value = "/blacks/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
   public byte[] convertToBlackAndWhite(
-      @PathVariable String id, @RequestBody MultipartFile coloredImage) throws IOException {
+      @PathVariable String id, @RequestPart MultipartFile coloredImage) throws IOException {
     return imageService.processImage(id, coloredImage);
   }
 
