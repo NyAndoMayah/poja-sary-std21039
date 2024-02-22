@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
 import javax.imageio.ImageIO;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,6 +22,7 @@ import school.hei.sary.repository.model.Image;
 
 @Service
 @NoArgsConstructor
+@AllArgsConstructor
 public class ImageService {
   private BucketComponent bucketComponent;
   private ImageRepository imageRepository;
